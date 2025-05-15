@@ -1,0 +1,46 @@
+name: basic
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.7.2 <4.0.0'
+
+isar_version: &isar_version 3.1.8 # define the version to be used
+
+dependencies:
+  flutter:
+    sdk: flutter
+  isar:
+    version: *isar_version
+    hosted: https://pub.isar-community.dev/
+  isar_flutter_libs: # contains Isar Core
+    version: *isar_version
+    hosted: https://pub.isar-community.dev/
+  flutter_hooks: ^0.21.2
+  hooks_riverpod: ^2.6.1
+  riverpod_annotation: ^2.6.1
+  http: ^1.4.0
+  freezed_annotation: ^2.4.1
+  json_annotation: ^4.8.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  isar_generator:
+    version: *isar_version
+    hosted: https://pub.isar-community.dev/
+  build_runner: ^2.4.6
+  custom_lint: ^0.6.4
+  riverpod_lint: ^2.6.1
+  riverpod_generator: ^2.6.1
+  freezed: ^2.4.1
+  json_serializable: ^6.6.0
+
+dependency_overrides:
+  analyzer: ^6.11.0
+  dart_style: ^2.3.4
+
+flutter:
+  uses-material-design: true

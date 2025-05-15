@@ -1,0 +1,51 @@
+# npx @openapitools/openapi-generator-cli generate -i openapi.yaml -g dart -o openapi
+openapi: 3.0.0
+info:
+  title: Movie API
+  version: 1.0.0
+paths:
+  /movies:
+    get:
+      summary: Get a list of movies
+      responses:
+        '200':
+          description: A list of movies
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Movie'
+  /movies/{id}:
+    get:
+      summary: Get a movie by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: A movie
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Movie'
+components:
+  schemas:
+    Movie:
+      type: object
+      properties:
+        id:
+          type: string
+        title:
+          type: string
+        year:
+          type: string
+        poster:
+          type: string
+        plot:
+          type: string
+        rating:
+          type: number
