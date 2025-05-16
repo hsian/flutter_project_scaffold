@@ -1,0 +1,16 @@
+schemas:
+  Movie:
+    type: object
+    properties:
+      id:
+        type: string
+      title:
+        type: string
+      year:
+        type: string
+      poster:
+        type: string
+      plot:
+        type: string
+      rating:
+        type: number

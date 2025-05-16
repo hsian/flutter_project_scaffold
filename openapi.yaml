@@ -15,7 +15,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Movie'
+                  $ref: './components.yaml#/schemas/Movie'
   /movies/{id}:
     get:
       summary: Get a movie by ID
@@ -31,21 +31,4 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Movie'
-components:
-  schemas:
-    Movie:
-      type: object
-      properties:
-        id:
-          type: string
-        title:
-          type: string
-        year:
-          type: string
-        poster:
-          type: string
-        plot:
-          type: string
-        rating:
-          type: number
+                $ref: './components.yaml#/schemas/Movie'

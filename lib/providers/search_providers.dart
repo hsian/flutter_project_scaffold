@@ -3,6 +3,8 @@ import 'package:http/http.dart' as http;
 import '../services/api_client.dart';
 import '../models/movie.dart';
 
+import 'package:openapi/api.dart' as openapi;
+
 final searchQueryProvider = StateProvider<String>((ref) => '');
 
 final searchResultsProvider = FutureProvider.autoDispose<List<Movie>>((ref) {
